@@ -17,4 +17,7 @@ Console.WriteLine("Digite o valor do saque: ");
 cc.sacar(Double.Parse(Console.ReadLine()));
 
 Console.WriteLine("Saldo pós saque: " + cc.Saldo);
+Console.WriteLine("Digite o valor do depósito: ");
+cc.depositar(Double.Parse(Console.ReadLine()));
+Console.WriteLine("Saldo pós depósito: " + cc.Saldo);
 Console.ReadKey();

@@ -39,6 +39,17 @@
             Saldo = Saldo - valor;
             return true;
         }
+        public bool depositar(double valor)
+        {   
+            if(valor <= 0)
+            {
+                Console.WriteLine("Valor inválido!");
+                return false;
+            }
+            Saldo = Saldo + valor;
+            Console.WriteLine("Saldo realizado com sucesso!");
+            return true; 
+        }
        
         public override string ToString()
         {
