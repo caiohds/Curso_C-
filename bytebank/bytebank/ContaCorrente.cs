@@ -4,16 +4,26 @@ namespace bytebank
 {
     public class ContaCorrente
     {
-        public Cliente titular;
-        public string Conta;
-        public int Numero_agencia;
-        public string Nome_agencia;
-        public double Saldo;
+        
 
+        public Cliente Titular{get; set;}
+        private string Conta { get; set; }
+        private int Numero_agencia { get; set; }
+        private string Nome_agencia { get; set; }
+        private double saldo;
+
+        public ContaCorrente()
+        {
+            Titular = new Cliente();
+            Conta = "";
+            Numero_agencia = 0;
+            Nome_agencia = "";
+            saldo = 0.0;
+        }
      
         public bool sacar(double valor) 
         {
-            if (Saldo < valor) 
+            if (saldo < valor) 
             {
                 Console.WriteLine("Digite um valor menor que o saldo!");
                 return false;
@@ -24,7 +34,7 @@ namespace bytebank
                 return false;
             }
             Console.WriteLine("Saque Realizado com sucesso!");
-            Saldo = Saldo - valor;
+            saldo = saldo - valor;
             return true;
         }
         public bool depositar(double valor)
@@ -34,31 +44,46 @@ namespace bytebank
                 Console.WriteLine("Valor inválido!");
                 return false;
             }
-            Saldo = Saldo + valor;
+            saldo = saldo + valor;
             Console.WriteLine("Saldo realizado com sucesso!");
             return true; 
         }
         public bool tranferir(double valor,ContaCorrente destino)
         {
-            if(Saldo < valor)
+            if(saldo < valor)
             {
                 return false;
             }if(valor < 0)
             {
                 return false;
             }
-            Saldo = Saldo - valor;
-            destino.Saldo = destino.Saldo + valor;
+            saldo = saldo - valor;
+            destino.saldo = destino.saldo + valor;
             return true;
         }
-       
+        
+        public double Saldo
+        {
+            get
+            {
+                return saldo;
+            }
+            set
+            {   
+                if(value < 0)
+                {
+                    return; 
+                }
+                saldo = value;
+            }
+        }
         public override string ToString()
         {
             return "Nome do Titular: " + titular.nome + 
-                   "\nConta: " + Conta + 
-                   "\nNúmero da Agência: " + Numero_agencia + 
-                   "\nNome da Agência: " + Nome_agencia +
-                   "\nSaldo: " + Saldo;
+                   "\nConta: " + conta + 
+                   "\nNúmero da Agência: " + numero_agencia + 
+                   "\nNome da Agência: " + nome_agencia +
+                   "\nSaldo: " + saldo;
         }
     }
 }
