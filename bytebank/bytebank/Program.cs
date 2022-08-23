@@ -1,24 +1,19 @@
 ﻿using bytebank;
-Console.WriteLine("Boas Vindas ao seu banco, ByteBank!");
+using bytebank.Titular;
 
-ContaCorrente cc = new ContaCorrente();
-cc.Titular = "Caio";
-cc.Conta = "10123-x";
-cc.Numero_agencia = 12;
-cc.Nome_agencia = "Agência central";
-cc.Saldo = 100.0;
+Cliente cliente = new Cliente();
+cliente.nome = "Caio Henrique";
+cliente.cpf = "12345678-91";
+cliente.profissao = "Programador c#";
 
-ContaCorrente conta1 = new ContaCorrente("Celso", "1910-x", 13, "Agência X", 100.0);
+ContaCorrente conta1 = new ContaCorrente();
 
-Console.WriteLine("Saldo do " + cc.Titular + " pré transferência: " + cc.Saldo);
-Console.WriteLine("Saldo do " + conta1.Titular + " pré transferência: " + conta1.Saldo);
+conta1.titular = cliente;
+conta1.Conta = "2513252-X";
+conta1.Numero_agencia = 35;
+conta1.Nome_agencia = "Agência Central";
 
-
-Console.WriteLine();
-Console.WriteLine(conta1.tranferir(30, cc) ? "Transferência realizada com sucesso!" : "Falha na transferência");
-Console.WriteLine();
-Console.WriteLine("Saldo do " + cc.Titular + " pós transferência: " + cc.Saldo);
-Console.WriteLine("Saldo do " + conta1.Titular + " pós transferência: " + conta1.Saldo);
-
+Console.WriteLine(cliente.nome);
+Console.WriteLine(conta1.titular.nome);
 
 Console.ReadKey();
