@@ -12,15 +12,16 @@ namespace bytebank
         private string Nome_agencia { get; set; }
         private double saldo;
 
-        public ContaCorrente()
+        public ContaCorrente(Cliente titular, string conta, int numero_agencia, string nome_agencia, double saldo)
         {
-            Titular = new Cliente();
-            Conta = "";
-            Numero_agencia = 0;
-            Nome_agencia = "";
-            saldo = 0.0;
+            this.Titular = titular;
+            this.Conta = conta;
+            this.Numero_agencia = numero_agencia;
+            this.Nome_agencia = nome_agencia;
+            this.saldo = saldo;
+
         }
-     
+
         public bool sacar(double valor) 
         {
             if (saldo < valor) 
@@ -79,10 +80,10 @@ namespace bytebank
         }
         public override string ToString()
         {
-            return "Nome do Titular: " + titular.nome + 
-                   "\nConta: " + conta + 
-                   "\nNúmero da Agência: " + numero_agencia + 
-                   "\nNome da Agência: " + nome_agencia +
+            return "Nome do Titular: " + Titular.nome + 
+                   "\nConta: " + Conta + 
+                   "\nNúmero da Agência: " + Numero_agencia + 
+                   "\nNome da Agência: " + Nome_agencia +
                    "\nSaldo: " + saldo;
         }
     }
