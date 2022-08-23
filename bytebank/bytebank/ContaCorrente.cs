@@ -19,7 +19,7 @@ namespace bytebank
             this.Numero_agencia = numero_agencia;
             this.Nome_agencia = nome_agencia;
             this.saldo = saldo;
-
+            TotalDeContasCriadas++;
         }
 
         public bool sacar(double valor) 
@@ -78,9 +78,10 @@ namespace bytebank
                 saldo = value;
             }
         }
+        public static int TotalDeContasCriadas { get; set; }
         public override string ToString()
         {
-            return "Nome do Titular: " + Titular.nome + 
+            return "Nome do Titular: " + Titular.Nome + 
                    "\nConta: " + Conta + 
                    "\nNúmero da Agência: " + Numero_agencia + 
                    "\nNome da Agência: " + Nome_agencia +
