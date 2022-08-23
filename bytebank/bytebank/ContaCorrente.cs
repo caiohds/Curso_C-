@@ -50,6 +50,19 @@
             Console.WriteLine("Saldo realizado com sucesso!");
             return true; 
         }
+        public bool tranferir(double valor,ContaCorrente destino)
+        {
+            if(Saldo < valor)
+            {
+                return false;
+            }if(valor < 0)
+            {
+                return false;
+            }
+            Saldo = Saldo - valor;
+            destino.Saldo = destino.Saldo + valor;
+            return true;
+        }
        
         public override string ToString()
         {
