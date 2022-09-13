@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Desafio_Programacao\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj": {}
+    "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Curso_CSHARP\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Desafio_Programacao\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj": {
+    "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Curso_CSHARP\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Desafio_Programacao\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj",
+        "projectUniqueName": "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Curso_CSHARP\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj",
         "projectName": "bytebank_ADM",
-        "projectPath": "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Desafio_Programacao\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj",
+        "projectPath": "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Curso_CSHARP\\bytebank_ADM\\bytebank_ADM\\bytebank_ADM.csproj",
         "packagesPath": "C:\\Users\\caioh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Desafio_Programacao\\bytebank_ADM\\bytebank_ADM\\obj\\",
+        "outputPath": "C:\\Users\\caioh\\OneDrive\\Documents\\Projetos_Programacao\\Curso_CSHARP\\bytebank_ADM\\bytebank_ADM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caioh\\AppData\\Roaming\\NuGet\\NuGet.Config",
