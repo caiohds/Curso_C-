@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Funcionario
+    public class Diretor
     {
-        
+
+
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public double Salario { get; set; }
 
         public double getBonificacao()
         {
-
-            return Salario * 0.1; 
+            return Salario; // o diretor recebe 100% de bonificação
         }
+
     }
 }
