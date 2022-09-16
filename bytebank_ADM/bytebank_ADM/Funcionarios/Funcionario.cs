@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Funcionario
+    public class  Funcionario
     {
         
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
+        public string Nome { get; private set; }
+        public string Cpf { get; private set; }
+        public double Salario { get; private set; }
 
         public virtual double getBonificacao()
         {
@@ -20,8 +20,11 @@ namespace bytebank_ADM.Funcionarios
         }
         public static int totalFuncionarios { get; private set; }
 
-        public Funcionario()
+        public Funcionario(string nome, string cpf, double salario)
         {
+            Nome = nome;
+            Salario = salario;
+            Cpf = cpf;
             Console.WriteLine("Criando um funcionário.");
             totalFuncionarios++;
         }

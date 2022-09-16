@@ -3,18 +3,8 @@ using bytebank_ADM.Utilitarios;
 
 Console.WriteLine("Boas vindas ao ByteBank Administração.");
 GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
-Funcionario joao = new Funcionario();
-
-joao.Nome = "João";
-joao.Cpf = "12345698";
-joao.Salario = 2000.0; 
-
-Diretor paula = new Diretor();
-paula.Nome = "Paula";
-paula.Cpf = "12345798";
-paula.Salario = 5000.0;
-
-
+Funcionario joao = new Funcionario("João","12345698",2000.0);
+Diretor paula = new Diretor("Paula","12345798", 5000.0);
 
 Console.WriteLine("Bonificação do João: " + joao.getBonificacao());
 Console.WriteLine("Bonificação da Paula: " + paula.getBonificacao());

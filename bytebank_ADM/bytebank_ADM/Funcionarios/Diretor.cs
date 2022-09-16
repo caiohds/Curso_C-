@@ -13,7 +13,7 @@ namespace bytebank_ADM.Funcionarios
             return Salario + base.getBonificacao(); // o diretor recebe 100% de bonificação
         }
 
-        public Diretor()
+        public Diretor (string nome, string cpf, double salario) : base(nome, cpf, salario)
         {
             Console.WriteLine("Criando um diretor.");
         }
