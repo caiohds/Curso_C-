@@ -6,23 +6,19 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class GerenteDeContas : Funcionario
     {
-       
-
-        public Diretor (string nome, string cpf) : base(nome, cpf, 5000)
+        public GerenteDeContas(string nome, string cpf) : base(nome,cpf,4000.0)
         {
-            Console.WriteLine("Criando um diretor.");
+            Console.WriteLine("Criando um gerente de contas.");
         }
-
         public override void aumentarSalario()
         {
-            this.Salario *= 1.15;
+            this.Salario *= 1.05;
         }
         public override double getBonificacao()
         {
-            return Salario * 0.5; // o diretor recebe 50% de bonificação
+            return Salario * 0.25; 
         }
-
     }
 }

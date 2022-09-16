@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class  Funcionario
+    public abstract class  Funcionario
     {
         
         public string Nome { get; private set; }
@@ -25,7 +25,7 @@ namespace bytebank_ADM.Funcionarios
             Nome = nome;
             Salario = salario;
             Cpf = cpf;
-            Console.WriteLine("Criando um funcionário.");
+            
             totalFuncionarios++;
         }
         public virtual void aumentarSalario()

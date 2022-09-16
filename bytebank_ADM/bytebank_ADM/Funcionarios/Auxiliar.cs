@@ -6,23 +6,20 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class Auxiliar : Funcionario
     {
-       
 
-        public Diretor (string nome, string cpf) : base(nome, cpf, 5000)
+        public Auxiliar(string nome, string cpf) : base(nome, cpf, 2000.0)
         {
-            Console.WriteLine("Criando um diretor.");
+            Console.WriteLine("criando um auxiliar");
         }
-
         public override void aumentarSalario()
         {
-            this.Salario *= 1.15;
+            this.Salario *= 1.10;
         }
         public override double getBonificacao()
         {
-            return Salario * 0.5; // o diretor recebe 50% de bonificação
+            return Salario * 0.2; 
         }
-
     }
 }
