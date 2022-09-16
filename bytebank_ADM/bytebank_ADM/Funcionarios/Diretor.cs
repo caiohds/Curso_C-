@@ -18,5 +18,10 @@ namespace bytebank_ADM.Funcionarios
             Console.WriteLine("Criando um diretor.");
         }
 
+        public override void aumentarSalario()
+        {
+            this.Salario *= 1.15;
+        }
+
     }
 }

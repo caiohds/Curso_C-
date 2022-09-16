@@ -12,4 +12,12 @@ gerenciador.Registrar(joao);
 gerenciador.Registrar(paula);
 Console.WriteLine("Total de bonificação: " + gerenciador.getBonificacao());
 Console.WriteLine("Total de Funcionários: " + Funcionario.totalFuncionarios);
+
+Console.WriteLine("Antigo salário do João: " + joao.Salario);
+joao.aumentarSalario();
+Console.WriteLine("Novo salário do João: " + joao.Salario);
+
+Console.WriteLine("Antigo salário da Paula: " + paula.Salario);
+paula.aumentarSalario();
+Console.WriteLine("Novo salário da Paula: " + paula.Salario);
 Console.ReadKey();
