@@ -10,7 +10,7 @@ namespace bytebank_ADM.Funcionarios
     {
         public override double getBonificacao()
         {
-            return Salario; // o diretor recebe 100% de bonificação
+            return Salario + base.getBonificacao(); // o diretor recebe 100% de bonificação
         }
 
     }
