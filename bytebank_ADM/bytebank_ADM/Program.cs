@@ -14,12 +14,12 @@ paula.Nome = "Paula";
 paula.Cpf = "12345798";
 paula.Salario = 5000.0;
 
-Funcionario pedro = new Diretor();
+
 
 Console.WriteLine("Bonificação do João: " + joao.getBonificacao());
 Console.WriteLine("Bonificação da Paula: " + paula.getBonificacao());
 gerenciador.Registrar(joao);
 gerenciador.Registrar(paula);
 Console.WriteLine("Total de bonificação: " + gerenciador.getBonificacao());
-
+Console.WriteLine("Total de Funcionários: " + Funcionario.totalFuncionarios);
 Console.ReadKey();

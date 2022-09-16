@@ -18,5 +18,12 @@ namespace bytebank_ADM.Funcionarios
 
             return Salario * 0.1; 
         }
+        public static int totalFuncionarios { get; private set; }
+
+        public Funcionario()
+        {
+            Console.WriteLine("Criando um funcionário.");
+            totalFuncionarios++;
+        }
     }
 }
