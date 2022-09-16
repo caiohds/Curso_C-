@@ -21,8 +21,13 @@ namespace bytebank_ADM.Funcionarios
         }
         public override double getBonificacao()
         {
-            return Salario * 0.5; // o diretor recebe 50% de bonificação
+            return Salario * 0.5; 
         }
+        public string Senha { get; set; }
 
+        public bool Autenticar(string senha)
+        {
+            return this.Senha == senha;
+        }
     }
 }
