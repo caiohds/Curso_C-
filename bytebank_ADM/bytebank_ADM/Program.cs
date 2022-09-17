@@ -43,7 +43,7 @@ void UsarSistema()
     ParceiroComercial joao = new ParceiroComercial();
 
     joao.Senha = "123";
-     
+
     //sistemaInterno.Logar(pedro, "2022");
     sistemaInterno.Logar(roberta, "123");
     sistemaInterno.Logar(ursula, "321");
