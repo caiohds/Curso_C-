@@ -18,7 +18,7 @@ namespace ByteBank
 
            // Console.WriteLine(ContaCorrente.TaxaOperacao);
  
-            metodo(1);
+            metodo(0);
             Console.ReadLine();
 
         }
@@ -33,14 +33,7 @@ namespace ByteBank
             {
                 Console.WriteLine("Não é possível dividir um número por 0!");
             }
-            catch (IOException)
-            {
-                Console.WriteLine("Digite algum valor!");
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Digite um valor inteiro!");
-            }
+           
         }
         private static void TestaDivisao(int divisor)
         {
@@ -50,9 +43,15 @@ namespace ByteBank
         }
         private static int dividir(int numero, int divisor)
         {
-
-
-            return numero / divisor;
+            try
+            {
+                return numero / divisor;
+            }
+            catch
+            {
+                Console.WriteLine("Exceção com número = " + numero + " e divisor = " + divisor);
+                throw;
+            }
         }
     }
 }
