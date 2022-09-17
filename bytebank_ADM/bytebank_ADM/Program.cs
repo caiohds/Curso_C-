@@ -38,10 +38,9 @@ void UsarSistema()
     GerenteDeContas ursula = new GerenteDeContas("Ursula", "326.985.628-89");
     ursula.Senha = "321";
 
-    Funcionario pedro = new Designer("Pedro", "326.985.628-89");
-    pedro.Senha = "2022";
-
-    sistemaInterno.Logar(pedro, "2022");
+    //Funcionario pedro = new Designer("Pedro", "326.985.628-89");
+   
+    //sistemaInterno.Logar(pedro, "2022");
     sistemaInterno.Logar(roberta, "123");
     sistemaInterno.Logar(ursula, "321");
 }
