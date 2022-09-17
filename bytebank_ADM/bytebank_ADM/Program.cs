@@ -26,18 +26,22 @@ void CalcularBonificacao()
     gerenciador.Registrar(samia);
     Console.WriteLine("Bonificação total: " + gerenciador.getBonificacao());
     Console.WriteLine("Quantidade de Funcionários registrados no sistema: " + Funcionario.totalFuncionarios);
-    
+
 }
 
 void UsarSistema()
 {
     SistemaInterno sistemaInterno = new SistemaInterno();
-    Diretor roberta = new Diretor("Roberta","159.753.398-04");
+    Diretor roberta = new Diretor("Roberta", "159.753.398-04");
     roberta.Senha = "123";
 
     GerenteDeContas ursula = new GerenteDeContas("Ursula", "326.985.628-89");
     ursula.Senha = "321";
 
+    Funcionario pedro = new Designer("Pedro", "326.985.628-89");
+    pedro.Senha = "2022";
+
+    sistemaInterno.Logar(pedro, "2022");
     sistemaInterno.Logar(roberta, "123");
     sistemaInterno.Logar(ursula, "321");
 }
