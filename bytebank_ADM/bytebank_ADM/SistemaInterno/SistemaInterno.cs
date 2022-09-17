@@ -21,16 +21,6 @@ namespace bytebank_ADM.SistemaInterno
             Console.WriteLine("Senha Incorreta!");
             return false;
         }
-        public bool Logar(ParceiroComercial funcionario, string senha)
-        {
-            bool usuarioAutenticado = funcionario.Autenticar(senha);
-            if (usuarioAutenticado)
-            {
-                Console.WriteLine("Bem vindo ao sistema");
-                return true;
-            }
-            Console.WriteLine("Senha Incorreta!");
-            return false;
-        }
+        
     }
 }
