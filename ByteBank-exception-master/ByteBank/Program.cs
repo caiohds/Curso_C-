@@ -14,9 +14,15 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta1 = new ContaCorrente(7480, 874250);
-
-            // Console.WriteLine(ContaCorrente.TaxaOperacao);
+            try
+            {
+                ContaCorrente conta = new ContaCorrente(10, 0);
+            }
+            catch(ArgumentException e)
+            {
+                Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
+                Console.WriteLine(e.Message);
+            }
            
             Console.ReadLine();
         }
