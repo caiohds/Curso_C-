@@ -17,9 +17,11 @@ namespace ByteBank
             try
             {
                 ContaCorrente conta = new ContaCorrente(10, 0);
+                Console.WriteLine("Conta criada com sucesso!");
             }
             catch(ArgumentException e)
             {
+                Console.WriteLine("Erro no parâmetro " + e.ParamName);
                 Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
                 Console.WriteLine(e.Message);
             }
