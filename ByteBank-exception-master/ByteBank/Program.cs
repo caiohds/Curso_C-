@@ -14,19 +14,20 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+            CarregarContas();
             try
             {
-                ContaCorrente conta = new ContaCorrente(12, 10);
-                ContaCorrente conta2 = new ContaCorrente(10, 10);
-                conta.Transferir(500, conta2);
+                //ContaCorrente conta = new ContaCorrente(12, 10);
+                //ContaCorrente conta2 = new ContaCorrente(10, 10);
+                //conta.Transferir(500, conta2);
 
             }
             catch(ArgumentException e)
             {
-                //Console.WriteLine("Erro no parâmetro " + e.ParamName);
+                Console.WriteLine("Erro no parâmetro " + e.ParamName);
                 Console.WriteLine(e.StackTrace);
-                //Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
-                //Console.WriteLine(e.Message);
+                Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
+                Console.WriteLine(e.Message);
             }
             catch(OperacaoFinanceiraException e)
             {
@@ -44,9 +45,18 @@ namespace ByteBank
         private static void CarregarContas()
         {
             LeitorDeArquivo leitor = new LeitorDeArquivo("contas.txt");
-            leitor.LerProximaLinha();
+            try
+            {
+                leitor.LerProximaLinha();
 
-            leitor.Fechar();
+                leitor.Fechar();
+            }
+            catch(IOException e)
+            {
+                leitor.Fechar();
+                Console.WriteLine("Exceção do Tipo IOException capturada e tratada!");
+            }
+            
         }
     }  
 }

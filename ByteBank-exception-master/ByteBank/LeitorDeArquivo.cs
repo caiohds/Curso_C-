@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -18,6 +19,7 @@ namespace ByteBank
         public string LerProximaLinha()
         {
             Console.WriteLine("Lendo Linha...");
+            throw new IOException();
             return "Linha do arquivo";
         }
         public void Fechar()
