@@ -16,7 +16,7 @@ namespace ByteBank
         {
             try
             {
-                ContaCorrente conta = new ContaCorrente(10, 10);
+                ContaCorrente conta = new ContaCorrente(0, 10);
                 Console.WriteLine("Conta criada com sucesso!");
                 conta.Depositar(50.0);
                 Console.WriteLine(conta.Saldo);
@@ -26,9 +26,10 @@ namespace ByteBank
             }
             catch(ArgumentException e)
             {
-                Console.WriteLine("Erro no parâmetro " + e.ParamName);
-                Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
-                Console.WriteLine(e.Message);
+                //Console.WriteLine("Erro no parâmetro " + e.ParamName);
+                Console.WriteLine(e.StackTrace);
+                //Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
+                //Console.WriteLine(e.Message);
             }
             catch(SaldoInsuficienteException e)
             {
