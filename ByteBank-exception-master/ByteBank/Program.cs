@@ -31,7 +31,12 @@ namespace ByteBank
             catch(OperacaoFinanceiraException e)
             {
                 Console.WriteLine(e.Message);
-                
+                Console.WriteLine(e.StackTrace);
+
+                Console.WriteLine("Informações da INNER EXCEPTION (exceção interna)");
+
+                Console.WriteLine(e.InnerException.Message);
+                Console.WriteLine(e.InnerException.StackTrace);
             }
            
             Console.ReadLine();
