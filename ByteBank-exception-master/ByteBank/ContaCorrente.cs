@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.Linq.Expressions;
 using System.Net.Http.Headers;
 
 namespace ByteBank
@@ -91,10 +92,13 @@ namespace ByteBank
 
         public bool Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (_saldo < valor)
+            try{
+                Sacar(valor);
+            }
+            catch (SaldoInsuficienteException e)
             {
-                throw new TransferenciaException("Saldo insuficiente para transferência!");
                 ContadorTransferenciasNaoPermitidas++;
+                throw new OperacaoFinanceiraException("Operação não realizada", e);
             }
 
             _saldo -= valor;
