@@ -20,7 +20,7 @@ namespace ByteBank
                 Console.WriteLine("Conta criada com sucesso!");
                 conta.Depositar(50.0);
                 Console.WriteLine(conta.Saldo);
-                conta.Sacar(50.0);
+                conta.Sacar(550.0);
                 Console.WriteLine(conta.Saldo);
 
             }
@@ -29,6 +29,11 @@ namespace ByteBank
                 Console.WriteLine("Erro no parâmetro " + e.ParamName);
                 Console.WriteLine("Ocorreu um erro do tipo ArgumentException");
                 Console.WriteLine(e.Message);
+            }
+            catch(SaldoInsuficienteException e)
+            {
+                Console.WriteLine("Exceção do tipo SaldoInsuficienteException");
+                Console.WriteLine("Saldo insuficiente!");
             }
            
             Console.ReadLine();

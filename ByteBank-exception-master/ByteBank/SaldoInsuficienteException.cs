@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ByteBank
 {
-    internal class SaldoInsuficienteException
+    public class SaldoInsuficienteException :Exception
     {
+
     }
 }
