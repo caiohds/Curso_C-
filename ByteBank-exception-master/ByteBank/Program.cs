@@ -49,12 +49,16 @@ namespace ByteBank
             {
                 leitor.LerProximaLinha();
 
-                leitor.Fechar();
+                
             }
             catch(IOException e)
             {
-                leitor.Fechar();
+                
                 Console.WriteLine("Exceção do Tipo IOException capturada e tratada!");
+            }
+            finally
+            {
+                leitor.Fechar();
             }
             
         }
