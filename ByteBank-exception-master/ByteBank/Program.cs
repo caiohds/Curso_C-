@@ -41,5 +41,12 @@ namespace ByteBank
            
             Console.ReadLine();
         }
-    }
+        private static void CarregarContas()
+        {
+            LeitorDeArquivo leitor = new LeitorDeArquivo("contas.txt");
+            leitor.LerProximaLinha();
+
+            leitor.Fechar();
+        }
+    }  
 }
