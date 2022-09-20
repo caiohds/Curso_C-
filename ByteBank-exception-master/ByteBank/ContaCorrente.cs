@@ -11,7 +11,8 @@ namespace ByteBank
 
         public static double TaxaOperacao { get; private set; }
         public static int TotalDeContasCriadas { get; private set; }
-
+        public int ContadorSaquesNaoPermitidos { get; private set; }
+        public int ContadorTransferenciasNaoPermitidas { get; private set; }
 
         private int _agencia;
         public int Agencia
@@ -75,6 +76,7 @@ namespace ByteBank
         {
             if (_saldo < valor)
             {
+                ContadorSaquesNaoPermitidos++;
                 throw new SaldoInsuficienteException("Saldo insuficiente para saque no valor de " + valor);
             }
 
@@ -91,7 +93,8 @@ namespace ByteBank
         {
             if (_saldo < valor)
             {
-                return false;
+                throw new TransferenciaException("Saldo insuficiente para transferência!");
+                ContadorTransferenciasNaoPermitidas++;
             }
 
             _saldo -= valor;
