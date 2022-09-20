@@ -16,8 +16,13 @@ namespace ByteBank
         {
             try
             {
-                ContaCorrente conta = new ContaCorrente(10, 0);
+                ContaCorrente conta = new ContaCorrente(10, 10);
                 Console.WriteLine("Conta criada com sucesso!");
+                conta.Depositar(50.0);
+                Console.WriteLine(conta.Saldo);
+                conta.Sacar(50.0);
+                Console.WriteLine(conta.Saldo);
+
             }
             catch(ArgumentException e)
             {
